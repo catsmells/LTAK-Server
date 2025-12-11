@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  ltak:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./assets:/srv/ltak/assets
+      - ./ltak.db:/srv/ltak/ltak.db
+    environment:
+      - LTACK_DB_PATH=/srv/ltak/ltak.db
